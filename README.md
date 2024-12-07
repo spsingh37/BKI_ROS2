@@ -39,8 +39,8 @@ This repository provides a ROS2 wrapper (ROS2 Humble) for [BKI_ROS](https://gith
 
 ## Install
 
-### Localization
-You can ignore the Localization instructions if you already have the pose data in a ROS2 bag file.
+### Localization (for pre-processing the poses)
+You can ignore the Localization instructions if you already have the pre-processed pose data in a ROS2 bag file.
 
 See LIO-SAM documentation for software and hardware dependency information.
 
@@ -110,12 +110,6 @@ Parameters can be set in the yaml config file, and it can be found in EndtoEnd/C
 #### Model Weights
 
 Weights for SPVNAS segmentation network and convbki layer are located in EndtoEnd/weights, currently the weights are trained on [Rellis3D dataset](https://github.com/unmannedlab/RELLIS-3D) for off-road driving and Semantic KITTI [1] for on-road driving. If you have other pretrained weights, you should store them here and change the seg_path and model_path in the config file accordingly. 
-
-## Preprocess Poses
-We are unable to release ROS/ROS2 bags for the military off-road driving to proprietary reasons. If you want to create ROS/ROS2 bags for your own data, below is the process we used to test on our custom data.
-
-We use LIO-SAM to preprocess poses - https://github.com/TixiaoShan/LIO-SAM
-They support both ROS/ROS2.
   
 ## Run the package (with ROS1 only)
 
